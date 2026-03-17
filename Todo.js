@@ -22,14 +22,11 @@ menu.addEventListener("click",()=>{
         menu.textContent ="Menu"
         isOpen = false;
     }
-    
+
 });
 add.addEventListener("click",()=>{
     form.style.opacity="1";
-    isSee = false;
-    if(isSee === true){
-        div.style.opacity="0"
-    }
+    div.style.opacity="0"
 })
 save.addEventListener("click",()=>{
     result += input.value;
@@ -37,10 +34,15 @@ save.addEventListener("click",()=>{
 });
 saved.addEventListener("click",()=>{
     form.style.opacity="0"
-    if(isSee === false){
-        let h1 = document.createElement("h1");
-    h1.textContent=result;
-    div.append(h1);
+    if(isSee === true){
+        if(input.value != ""){
+            let h1 = document.createElement("h1")
+            h1.textContent=result;
+            div.append(h1)
+        }
+        else{
+            div.append("")
+        }
     }
-    isSee === true
+    div.style.opacity="1"
 })
