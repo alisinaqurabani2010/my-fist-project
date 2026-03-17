@@ -7,10 +7,13 @@ let input = document.getElementById("input")
 const div = document.getElementById("list")
 const body = document.getElementById("body")
 const save = document.getElementById("save")
+const select = document.getElementById("select")
 let result  = "";
 let isOpen = false;
 let isSee = true;
 menu.addEventListener("click",()=>{
+    form.style.opacity="0"
+    div.style.opacity="0"
     if(isOpen === false){
         menuDiv.style.marginTop="5px";
         menuDiv.style.transition="1.3s"
@@ -18,7 +21,7 @@ menu.addEventListener("click",()=>{
         isOpen = true
     }
     else{
-        menuDiv.style.marginTop="-200px";
+        menuDiv.style.marginTop="-250px";
         menu.textContent ="Menu"
         isOpen = false;
     }
@@ -26,22 +29,40 @@ menu.addEventListener("click",()=>{
 });
 add.addEventListener("click",()=>{
     form.style.opacity="1";
-    div.style.opacity="0"
+    isSee = true;
+    if(isSee == true){
+        div.style.opacity="0"
+    }
 })
 save.addEventListener("click",()=>{
-    result += input.value;
+    if(input.value == ""){
+        result += ""
+    }
+    else{
+        result += input.value;
+    }
     input.value =""
 });
 saved.addEventListener("click",()=>{
     form.style.opacity="0"
-    if(result.trim() === ""){
-        return;
-    }
-    else{
-        let h1 = document.createElement("h1")
-        h1.textContent=result;
-        div.append(h1)
-    }
+    if(result!= ""){
+        let p = document.createElement("p")
+    p.textContent="Work:"+result;
+    let nextp = document.createElement("p")
+    nextp.textContent="Should Do:"+select.value;
+    nextp.style.fontSize="25px";
+    div.append(p,nextp)
+    div.style.transition="1.3s";
+    p.style.paddingTop="20px"
+    div.style.marginLeft="43%";
+    nextp.style.paddingBottom="20px"
+    nextp.style.borderBottom="1.5px solid "
+    nextp.style.width="300px"
+    p.style.fontSize="25px"
     div.style.opacity="1"
     input.value =""
+    }
+    else{
+        return
+    }
 })

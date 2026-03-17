@@ -2,7 +2,7 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: cursive, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 #container{
     display: flex;
@@ -31,7 +31,7 @@
     float: right;
     gap: 10px;
     margin-right: 8px;
-    margin-top: -200px;
+    margin-top: -250px;
 }
 #add, #saved ,#about , #close{
     border: none;
@@ -81,5 +81,5 @@
     text-align: center;
     font-size: 15px;
     border-radius: 20px;
-    width: 258px;
+    width: 295px;
 }
