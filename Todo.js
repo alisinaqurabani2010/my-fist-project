@@ -12,26 +12,31 @@ let result  = "";
 let isOpen = false;
 let isSee = true;
 menu.addEventListener("click",()=>{
-    form.style.opacity="0"
+    form.style.opacity="0";
+    form.style.marginTop="-100px"
     div.style.opacity="0"
     if(isOpen === false){
         menuDiv.style.marginTop="5px";
         menuDiv.style.transition="1.3s"
-        menu.textContent ="Close"
+        menu.textContent ="Close";
+        menuDiv.style.opacity="1"
         isOpen = true
     }
     else{
         menuDiv.style.marginTop="-250px";
         menu.textContent ="Menu"
+        menuDiv.style.opacity="0"
         isOpen = false;
     }
 
 });
 add.addEventListener("click",()=>{
-    form.style.opacity="1";
+    form.style.marginTop="2px"
+    form.style.opacity="1"
     isSee = true;
     if(isSee == true){
-        div.style.opacity="0"
+        div.style.opacity="0";
+        div.style.marginLeft="0";
     }
 })
 save.addEventListener("click",()=>{
@@ -44,7 +49,8 @@ save.addEventListener("click",()=>{
     input.value =""
 });
 saved.addEventListener("click",()=>{
-    form.style.opacity="0"
+    form.style.opacity="0";
+    form.style.marginTop="-100px"
     if(result!= ""){
         let p = document.createElement("p")
     p.textContent="Work:"+result;
@@ -63,6 +69,6 @@ saved.addEventListener("click",()=>{
     input.value =""
     }
     else{
-        return
+        return;
     }
 })
