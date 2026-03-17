@@ -1,0 +1,84 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#container{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(221, 146, 7, 0.927);
+    padding: 7px 30px;
+}
+#nameTodo{
+    font-weight: bold;
+    color: whitesmoke;
+    text-shadow: 2px 5px 30px black;
+}
+#menu{
+    border: none;
+    padding: 5px 20px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+#menu:hover{
+    cursor: pointer;
+}
+#menuDiv{
+    display: flex;
+    flex-direction: column;
+    width: 140px;
+    float: right;
+    gap: 10px;
+    margin-right: 8px;
+    margin-top: -200px;
+}
+#add, #saved ,#about , #close{
+    border: none;
+    background-color: white;
+    padding: 10px 18px;
+    font-size:18px;
+    border-radius: 10px;
+    transition: 1s;
+}
+#add:hover, #saved:hover, #about:hover{
+    cursor: pointer;
+    background-color: rgb(214, 202, 202);
+}
+#form{
+    margin: 0 45%;
+    opacity: 0;
+    transition: 1s;
+}
+#input{
+    margin: 7px 0;
+    height: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    
+    padding: 5px 10px;
+    border: none;
+}
+#input:focus{
+    outline: 0;
+}
+#save{
+    padding: 5px 20px;
+    background-color: rgb(97, 97, 193);
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: none;
+    height: 40px;
+    font-size: 18px;
+    margin: 7px 0;
+}
+#save:hover{
+    cursor: pointer;
+    
+}
+#select{
+    padding: 4px;
+    text-align: center;
+    font-size: 15px;
+    border-radius: 20px;
+    width: 258px;
+}

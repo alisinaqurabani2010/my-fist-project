@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Todo.css">
+    <script src="Todo.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body" style="background-color: rgb(197, 186, 186); ">
+    <div id="container">
+        <h1 id="nameTodo">ToDo list</h1>
+        <button id="menu">menu</button>
+    </div>
+    <div id="menuDiv">
+        <button id="add">Add a Todo</button>
+        <button id="saved">saved</button>
+        <button id="about">About us</button>
+    </div>
+    <div id="form">
+        <div style="display: flex; ">
+            <input type="text" id="input" placeholder="What is in your ming?">
+            <button id="save">Save</button>
+        </div>
+            <select id="select">
+                <option  value="">Important</option>
+                <option value="">Normal</option>
+                <option value="">Opitional</option>
+            </select>
+    </div>
+    <div id="list"></div>
+</body>
+</html>
