@@ -34,15 +34,14 @@ save.addEventListener("click",()=>{
 });
 saved.addEventListener("click",()=>{
     form.style.opacity="0"
-    if(isSee === true){
-        if(input.value != ""){
-            let h1 = document.createElement("h1")
-            h1.textContent=result;
-            div.append(h1)
-        }
-        else{
-            div.append("")
-        }
+    if(result.trim() === ""){
+        return;
+    }
+    else{
+        let h1 = document.createElement("h1")
+        h1.textContent=result;
+        div.append(h1)
     }
     div.style.opacity="1"
+    input.value =""
 })
