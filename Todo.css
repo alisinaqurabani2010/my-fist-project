@@ -8,18 +8,25 @@
     display: flex;
     justify-content: space-between;
     background-color: rgba(221, 146, 7, 0.927);
-    padding: 7px 30px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
 }
 #nameTodo{
     font-weight: bold;
     color: whitesmoke;
     text-shadow: 2px 5px 30px black;
+    padding-left: 20px;
 }
 #menu{
     border: none;
     padding: 5px 20px;
     border-radius: 10px;
     font-weight: 500;
+    margin: 10px 20px;
+    width: 100px;
+    padding: 10px;
 }
 #menu:hover{
     cursor: pointer;
@@ -30,9 +37,11 @@
     width: 140px;
     float: right;
     gap: 10px;
-    margin-right: 8px;
-    margin-top: -250px;
-    opacity: 0;
+    position: absolute;
+    right: 8px;
+    top: 65px;
+    margin-top: -220px;
+    opacity: 1;
 }
 #add, #saved ,#about , #close{
     border: none;
@@ -47,7 +56,7 @@
     background-color: rgb(214, 202, 202);
 }
 #form{
-    margin: 0 45%;
+    margin: 0 42%;
     margin-top: -100px;
     opacity: 0;
     display: block;
@@ -85,4 +94,20 @@
     font-size: 15px;
     border-radius: 20px;
     width: 295px;
+}
+#imgDivContainer{
+    width: 96%;
+    margin: 20px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+}
+#imgDiv{
+    width: 25%;
+}
+#img{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
 }
