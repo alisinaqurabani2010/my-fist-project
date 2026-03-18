@@ -3,17 +3,21 @@ const menuDiv = document.getElementById("menuDiv")
 const add = document.getElementById("add");
 const saved = document.getElementById("saved");
 const form = document.getElementById("form")
+const section = document.getElementById("section")
+const about = document.getElementById("about")
 let input = document.getElementById("input")
 const div = document.getElementById("list")
 const body = document.getElementById("body")
 const save = document.getElementById("save")
 const select = document.getElementById("select")
 const imgDivContainer = document.getElementById("imgContainer");
+const h3ForSaved = document.getElementById("h3ForSaved")
 let result  = "";
 let isOpen = false;
-let isSee = true;
+let isSee = false;
 menu.addEventListener("click",()=>{
     form.style.opacity="0";
+    section.style.display="none"
     form.style.marginTop="-100px"
     div.style.transition="1.3s";
     div.style.display="none"
@@ -37,6 +41,7 @@ menu.addEventListener("click",()=>{
 add.addEventListener("click",()=>{
     form.style.marginTop="65px";
     imgDivContainer.style.display="none"
+    section.style.display="none"
     form.style.opacity="1"
     isSee = true;
     if(isSee == true){
@@ -55,6 +60,7 @@ save.addEventListener("click",()=>{
 });
 saved.addEventListener("click",()=>{
     form.style.opacity="0";
+    section.style.display="none"
     form.style.marginTop="-100px"
     if(result!= ""){
         let p = document.createElement("p")
@@ -77,5 +83,23 @@ saved.addEventListener("click",()=>{
     }
     else{
         imgDivContainer.style.display="block"
+        h3ForSaved.style.marginTop="0"
+        h3ForSaved.style.transition="1.3s"
+        setTimeout(()=>{
+            h3ForSaved.style.marginTop="-150px"
+        },2000)
     }
+})
+about.addEventListener("click",()=>{
+    section.style.marginRight="auto"
+    section.style.display="block"
+    div.style.display="none"
+    form.style.marginTop="-100px"
+    section.style.marginTop="90px";
+    isSee = true;
+    if(isSee == true){
+        div.style.opacity="0";
+        div.style.marginLeft="0";
+    }
+    imgDivContainer.style.display="none";
 })
